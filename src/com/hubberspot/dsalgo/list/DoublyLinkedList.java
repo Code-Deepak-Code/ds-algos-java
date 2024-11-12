@@ -63,10 +63,10 @@ public class DoublyLinkedList {
       if (isEmpty()) {
          tail = newNode;
       } else {
-         head.previous = newNode;
+         head.previous = newNode; // this is update current/older node previous section
       }
-      newNode.next = head;
-      head = newNode;
+      newNode.next = head; // this is to update new incoming node next section
+      head = newNode; // head is moving backwards from 0 node to all the new inserting nodes
       length++;
    }
 
@@ -89,9 +89,9 @@ public class DoublyLinkedList {
 
       ListNode temp = head;
       if (head == tail) {
-         tail = null;
+         tail = null; 
       } else {
-         head.next.previous = null;
+         head.next.previous = null; 
       }
       head = head.next;
       temp.next = null;
