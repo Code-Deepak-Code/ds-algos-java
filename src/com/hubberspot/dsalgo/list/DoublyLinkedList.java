@@ -88,7 +88,7 @@ public class DoublyLinkedList {
       }
 
       ListNode temp = head;
-      if (head == tail) {
+      if (head == tail) { // this condition means thre is only node in the list
          tail = null; 
       } else {
          head.next.previous = null; 
